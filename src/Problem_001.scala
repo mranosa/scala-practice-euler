@@ -5,7 +5,8 @@
  */
 object Problem_001 {
   def main(args: Array[String]) {
-    var sum = (1 until 1000).filter(n => n % 3 == 0 || n % 5 == 0).sum
+    def check(i: Int) = i % 3 == 0 || i % 5 == 0
+    var sum = (1 until 1000).filter(check _).sum
 
     println(sum)
   }
